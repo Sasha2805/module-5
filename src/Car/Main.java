@@ -180,20 +180,22 @@ public class Main {
         if (taskNumber == 4) car.disembarkAll();
         if (taskNumber == 5) {
             int countDoors = car.returnCountDoors();
-            if (countDoors == 0) {
-                System.out.println("Массив дверей пустой!");
+            System.out.print("Введите идекс:");
+            int index = in.nextInt();
+            if ((countDoors == 0) || (index > countDoors)){
+                System.out.println("Такого индекса в массиве нет!");
             }else {
-                System.out.print("Введите идекс:");
-                car.returnDoor(in.nextInt());
+                car.returnDoor(index);
             }
         }
         if (taskNumber == 6) {
             int countWheels = car.returnCountWheels();
-            if (countWheels == 0) {
-                System.out.println("Массив колес пустой!");
+            System.out.print("Введите идекс:");
+            int index = in.nextInt();
+            if ((countWheels == 0) || (index > countWheels)){
+                System.out.println("Такого индекса в массиве нет!");
             }else {
-                System.out.print("Введите идекс:");
-                car.returnWheel(in.nextInt());
+                car.returnWheel(index);
             }
         }
         if (taskNumber == 7) car.removeWheels();
