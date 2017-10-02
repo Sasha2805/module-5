@@ -1,7 +1,7 @@
 package Car;
 import java.util.ArrayList;
 
-public class Car {
+public class Car{
     private final String DATE_MANUFACTURE;
     private String engineType;
     private int fullSpeed;
@@ -29,7 +29,7 @@ public class Car {
         this.currentSpeed = currentSpeed;
     }
 
-    public void chandeSpeed(int currentSpeed){
+    public void changeSpeed(int currentSpeed){
         this.currentSpeed =  currentSpeed;
     }
 
@@ -45,7 +45,7 @@ public class Car {
         numbersCurrently = 0;
     }
 
-    public void addWheel(){             // метод для добавления обьекта CarWheel в массив wheels
+    public void addWheel(){             // Метод для добавления обьекта CarWheel в массив wheels
         wheels.add(new CarWheel());     // для конструктора по умолчанию
     }
 
@@ -53,12 +53,20 @@ public class Car {
         wheels.add(new CarWheel(conditionWheel));
     }
 
-    public void addDoor(){          // метод для добавления обьекта CarDoor в массив doors
+    public void addDoor(){          // Метод для добавления обьекта CarDoor в массив doors
         doors.add(new CarDoor());   // для конструктора по умолчанию
     }
 
     public void addDoor(boolean isDoorOpen, boolean isWindowOpen){  // Перегрузка метода
         doors.add(new CarDoor(isDoorOpen, isWindowOpen));
+    }
+
+    public int returnCountDoors(){   //Возвращаем количество дверей в масиве,
+        return doors.size();         // для дальнейшей проверки массива на пустоту
+    }
+
+    public int returnCountWheels(){   //Возвращаем количество колес в масиве,
+        return wheels.size();         // для дальнейшей проверки массива на пустоту
     }
 
     public CarDoor returnDoor(int index){   //Возвращаем CarDoor по индексу
