@@ -144,7 +144,7 @@ public class Main {
             System.out.print("Введите X (к-во процентов):");
             wheel.eraseWheel(in.nextInt());
         }
-        if (taskNumber == 3) wheel.condition();
+        if (taskNumber == 3) System.out.println("Текущее состояние: " + wheel.condition());
         if (taskNumber == 4) wheel.show();
 
         System.out.println("Если хотите продолжить выполнение методов, введите \"yes\": ");
@@ -185,7 +185,7 @@ public class Main {
             if ((countDoors == 0) || (index > countDoors)){
                 System.out.println("Такого индекса в массиве нет!");
             }else {
-                car.returnDoor(index);
+                car.returnDoor(index).show();
             }
         }
         if (taskNumber == 6) {
@@ -195,7 +195,7 @@ public class Main {
             if ((countWheels == 0) || (index > countWheels)){
                 System.out.println("Такого индекса в массиве нет!");
             }else {
-                car.returnWheel(index);
+                car.returnWheel(index).show();
             }
         }
         if (taskNumber == 7) car.removeWheels();
@@ -203,7 +203,7 @@ public class Main {
             System.out.print("Введите к-во колес:");
             car.addWheels(in.nextInt());
         }
-        if (taskNumber == 9) car.maxSpeed();
+        if (taskNumber == 9) System.out.println("Максимальная скорость: " + car.maxSpeed());
         if (taskNumber == 10) car.addDoor();    // Создала методы по добавлению дверей и колес
         if (taskNumber == 11) car.addWheel();
         if (taskNumber == 12) car.show();
