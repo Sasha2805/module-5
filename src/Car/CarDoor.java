@@ -14,11 +14,11 @@ public class CarDoor {
     }
 
     public void openDoor(){
-       if (!isDoorOpen) isDoorOpen = true;
+       isDoorOpen = true;
     }
 
     public void closeDoor(){
-        if (isDoorOpen) isDoorOpen = false;
+        isDoorOpen = false;
     }
 
     public void openAndCloseDoor(){
@@ -26,11 +26,11 @@ public class CarDoor {
     }
 
     public void openWindow(){
-        if (!isWindowOpen) isWindowOpen = true;
+        isWindowOpen = true;
     }
 
     public void closeWindow(){
-        if (isWindowOpen) isWindowOpen = false;
+        isWindowOpen = false;
     }
 
     public void openAndCloseWindow(){
